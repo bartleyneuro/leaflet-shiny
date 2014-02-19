@@ -59,8 +59,8 @@ createLeafletMap <- function(session, outputId) {
 #' @export
 leafletMap <- function(
   outputId, width, height,
-  initialTileLayer = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
-  initialTileLayerAttribution = HTML('&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'),
+  initialTileLayer = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
+  initialTileLayerAttribution = HTML('&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'),
   options=NULL) {
   
   addResourcePath("leaflet", system.file("www", package="leaflet"))
@@ -73,11 +73,11 @@ leafletMap <- function(
   tagList(
     singleton(
       tags$head(
-        HTML('<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+        HTML('<link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
 <!--[if lte IE 8]>
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+  <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
 <![endif]-->
-<script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>'),
+<script src="https://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>'),
         tags$script(src="leaflet/binding.js")
       )
     ),
